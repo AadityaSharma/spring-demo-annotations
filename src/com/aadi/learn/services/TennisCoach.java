@@ -2,7 +2,7 @@ package com.aadi.learn.services;
 
 import org.springframework.stereotype.Component;
 
-@Component("thatSillyCoach")
+@Component
 public class TennisCoach implements Coach{
 
     @Override
