@@ -10,6 +10,7 @@
 	
 	<!--  Enable component based scanning  -->
 	<context:component-scan base-package="com.aadi.learn" />
+	<context:property-placeholder location="classpath:sport.properties" />
 
 	<!-- Define your beans here -->
 
