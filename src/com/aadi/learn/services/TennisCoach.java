@@ -1,11 +1,13 @@
 package com.aadi.learn.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class TennisCoach implements Coach{
 
+    @Qualifier("happyFortuneService")
     @Autowired
     private FortuneService fortuneService;
 
@@ -14,8 +16,7 @@ public class TennisCoach implements Coach{
     public TennisCoach(FortuneService fortuneService) {
         System.out.println(">> TennisCoach: inside custom constructor");
         this.fortuneService = fortuneService;
-    }
-    */
+    } */
 
     // define a default constructor
     public TennisCoach() {
