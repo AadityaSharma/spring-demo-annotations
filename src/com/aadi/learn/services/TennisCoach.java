@@ -2,9 +2,12 @@ package com.aadi.learn.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope("prototype")
+//@Scope("singleton")
 public class TennisCoach implements Coach{
 
     @Qualifier("randomFortuneService")
