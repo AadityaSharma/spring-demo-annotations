@@ -8,8 +8,12 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype")
 //@Scope("singleton")
+@Scope("prototype")
+// In contrast to the other scopes, Spring does not manage the complete lifecycle of a
+//prototype bean: the container instantiates, configures, and otherwise assembles a
+//prototype object, and hands it to the client, with no further record of that prototype
+//instance.
 public class TennisCoach implements Coach, InitializingBean, DisposableBean {
 
     @Qualifier("randomFortuneService")
