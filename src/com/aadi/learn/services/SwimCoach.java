@@ -1,6 +1,14 @@
 package com.aadi.learn.services;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class SwimCoach implements Coach {
+
+    @Value("${foo.email}")
+    private String email;
+
+    @Value("${foo.team}")
+    private String team;
 
     private FortuneService fortuneService;
 
@@ -16,5 +24,13 @@ public class SwimCoach implements Coach {
     @Override
     public String getDailyFortune() {
         return fortuneService.getFortune();
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getTeam() {
+        return team;
     }
 }

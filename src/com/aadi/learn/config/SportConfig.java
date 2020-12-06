@@ -4,9 +4,11 @@ import com.aadi.learn.services.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 //@ComponentScan("com.aadi.learn")
+@PropertySource("classpath:sport.properties")
 public class SportConfig {
 
     // define a bean for our fortune service
